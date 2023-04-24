@@ -113,3 +113,20 @@ except KeyboardInterrupt:
     GPIO.cleanup()
 ```
 Unlike C++, Python bases its arduino code off of hertz. That means that instead of 180* is -0.5 to 0.5.
+## PID Code
+https://pypi.org/project/simple-pid/
+```py
+from simple_pid import PID
+pid = PID(1, 0.1, 0.05, setpoint=1)#IMPORTANT
+
+# Assume we have a system we want to control in controlled_system
+v = controlled_system.update(0)
+
+while True:
+    # Compute new output from the PID according to the systems current value
+    control = pid(v)#IMPORTANT
+
+    # Feed the PID output to the system and get its current value
+    v = controlled_system.update(control)#IMPORTANT
+```
+This code is a non-functioning example, it just shows how you'd call a function. The main lines are as marked, I suggest looking them up in the link to better understand the code.
