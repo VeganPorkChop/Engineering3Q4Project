@@ -130,6 +130,15 @@ while True:
     v = controlled_system.update(control)#IMPORTANT
 ```
 This code is a non-functioning example, it just shows how you'd call a function. The main lines are as marked, I suggest looking them up in the link to better understand the code.
+# CODE PROTOTYPE
+## Reflection Questions:
+*What is your project?
+Our project is an auto-ball balencing plate. Using PID in and outputs we plan to be able to make a ball stop in the center of the plate without human interference.
+*What components are connected to your Raspberry Pi?
+There are very few components connected to our Pi, we have two servos, a camera module, and a batterypack connected to a switch.
+*Explain (in detail) how your Code Prototype works
+Our prototype is very simple. We combined all of the example code from above and put it all into one document. Our code initially creates 3 windows. One for each PID tuning and one for the camera. Then it creates slide bars so we can update the PID values real-time. Then it finds a ball on the camera, draws a dot on the center of it, and gives us its centerpoint. With that information we use our PID to get it as close to the center as possible. Then we find the slide bar values, update the PID and move the servos. Finally, the sequence starts over.
+
 # FINAL CODE
 # CAD
 [Onshape Doc](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/f19878d97a4d184786ee9736)
