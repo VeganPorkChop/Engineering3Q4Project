@@ -293,7 +293,7 @@ cv2.destroyAllWindows()
 ```
 ## Prototype Video
 ![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/91289762/234966713-8d4e86ee-c05f-425c-882f-11245f7f868c.gif)
-## Reflection Questions:
+## Milestone Reflection Questions:
 * **What is your project?**
 Our project is an auto-ball balencing plate. Using PID in and outputs we plan to be able to make a ball stop in the center of the plate without human interference.
 * **What components are connected to your Raspberry Pi?**
@@ -308,4 +308,11 @@ I've learned that one major differnce between C++ and Python is the variable def
 As of 4/26/23 we need to redesign the base plate and make a more structurally sound building, also re-level the servos so that they're not implicitly trying to throw our pingpong ball away. The next would be to complete our project milestones.
 # FINAL CODE
 # CAD
-[Onshape Doc](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/f19878d97a4d184786ee9736)
+## Milestone Reflection Questions
+* **What are the external dimensions of your design in mm (length, width, and height)?**
+The project in whole is 320mm x 250mm x 250mm(12.6in x 9.8in x 9.8in).
+* **How many fasteners (screws) are required for your design?**
+We have a total of __ fasteners in our design.
+* **What design changes have you made based on what you learned from your CAD model?**
+We changed from a double servo per axis design to a single servo per axis with a bearing on the other end. We heightened the camera for a better angle, and also to increase its sights so that we could crop the image and make the code run faster. We changed the size of the balence plate so that there was a larger margin of error. Finally, we added a weight to the base because the whole design kept falling over because the plate juts too far out.
+* [Onshape Doc](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/f19878d97a4d184786ee9736)
