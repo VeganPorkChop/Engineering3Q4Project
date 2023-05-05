@@ -11,6 +11,8 @@
 * Week 4/24-31
  -Documentation just started and all the code functions individually except for the pid code. It, in concept, functions perfectly, but needs lots of tuning.
  -One problem we have is that the servos are off center, originally we thought about changing the set point of the PID function to accomidate, but instead of dealing with I we decided to level the servo instead and offset its degrees.
+ # Week 5/1-5
+ -The code is all put together and functions well, but the camera recognition isn't completly consistent so the box can never truly decide where the center of the pingpong ball is so its very jittery. This week we intend to finish the code and have the ball balencing. We're also going to add some quality of life attachments next time, and different possible balensable objects.
  
 # CODE
 ## Camera Code + Detection
@@ -307,6 +309,16 @@ I've learned that one major differnce between C++ and Python is the variable def
 * **What are your immediate next steps?**
 As of 4/26/23 we need to redesign the base plate and make a more structurally sound building, also re-level the servos so that they're not implicitly trying to throw our pingpong ball away. The next would be to complete our project milestones.
 # FINAL CODE
+# Reflection
+## Look out for...
+* The PiGPIO library for the servos requires you to 
+```sudo
+sudo pigpiod
+```
+after a restart. Don't know why, but it doesnt work otherwise. Here is the error message
+```py
+Can't connect to pigpio at 127.0.0.1(8888)
+```
 # CAD
 ## Milestone Reflection Questions
 * **What are the external dimensions of your design in mm (length, width, and height)?**
