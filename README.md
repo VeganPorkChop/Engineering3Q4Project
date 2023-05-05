@@ -11,8 +11,8 @@
 * Week 4/24-31
  -Documentation just started and all the code functions individually except for the pid code. It, in concept, functions perfectly, but needs lots of tuning.
  -One problem we have is that the servos are off center, originally we thought about changing the set point of the PID function to accomidate, but instead of dealing with I we decided to level the servo instead and offset its degrees.
- # Week 5/1-5
- -The code is all put together and functions well, but the camera recognition isn't completly consistent so the box can never truly decide where the center of the pingpong ball is so its very jittery. This week we intend to finish the code and have the ball balencing. We're also going to add some quality of life attachments next time, and different possible balensable objects.
+ * Week 5/1-5
+-The code is all put together and functions well, but the camera recognition isn't completly consistent so the box can never truly decide where the center of the pingpong ball is so its very jittery. This week we intend to finish the code and have the ball balencing. We're also going to add some quality of life attachments next time, and different possible balensable objects. Our teacher placed an order for steel balls, so those might be better.
  
 # CODE
 ## Camera Code + Detection
