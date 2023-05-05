@@ -115,6 +115,55 @@ except KeyboardInterrupt:
     GPIO.cleanup()
 ```
 Unlike C++, Python bases its arduino code off of hertz. That means that instead of 180* is -0.5 to 0.5.
+## Camera Recording Code
+```py
+# Python program to illustrate 
+# saving an operated video
+  
+# organize imports
+import numpy as np
+import cv2
+  
+# This will return video from the first webcam on your computer.
+cap = cv2.VideoCapture(0)  
+  
+# Define the codec and create VideoWriter object
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
+out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
+  
+# loop runs if capturing has been initialized. 
+while(True):
+    # reads frames from a camera 
+    # ret checks return at each frame
+    ret, frame = cap.read() 
+  
+    # Converts to HSV color space, OCV reads colors as BGR
+    # frame is converted to hsv
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+      
+    # output the frame
+    out.write(hsv) 
+      
+    # The original input frame is shown in the window 
+    cv2.imshow('Original', frame)
+  
+    # The window showing the operated video stream 
+    cv2.imshow('frame', hsv)
+  
+      
+    # Wait for 'a' key to stop the program 
+    if cv2.waitKey(1) & 0xFF == ord('a'):
+        break
+  
+# Close the window / Release webcam
+cap.release()
+  
+# After we release our webcam, we also release the output
+out.release() 
+  
+# De-allocate any associated memory usage 
+cv2.destroyAllWindows()
+```
 ## PID Code
 https://pypi.org/project/simple-pid/
 ```py
@@ -315,10 +364,16 @@ As of 4/26/23 we need to redesign the base plate and make a more structurally so
 ```sudo
 sudo pigpiod
 ```
-after a restart. Don't know why, but it doesnt work otherwise. Here is the error message
+after a restart. Don't know why, but it doesnt work otherwise. Here is the error message:
 ```py
 Can't connect to pigpio at 127.0.0.1(8888)
 ```
+* The image recognition is very light sensative, and normally only works at a certain time of say. Use a wall or don't use it near a window.
+* The example code for the image recognition doesn't work off of the site, its library imports are bad and ineffective. Skip straight to using the final code.
+* The image recognition doesn't like reflections. Don't use acrylic for the plate.
+* The recording portion of OpenCV is bad, but the computer won't let you connect more than one object to the PiCamera.
+* The servos don't need as much of output capability as you think (PID code). Our prototype code lets the servos go from  -0.06 to 0.06 htz.
+* 
 # CAD
 ## Milestone Reflection Questions
 * **What are the external dimensions of your design in mm (length, width, and height)?**
