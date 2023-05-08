@@ -14,7 +14,7 @@
  * Week 5/1-5
 -The code is all put together and functions well, but the camera recognition isn't completly consistent so the box can never truly decide where the center of the pingpong ball is so its very jittery. This week we intend to finish the code and have the ball balencing. We're also going to add some quality of life attachments next time, and different possible balensable objects. Our teacher placed an order for steel balls, so those might be better.
 * Week 5/8-13
--This week we plan to finish the documentation and get the code for the steel ball working. We also want to consider trying to use an auto PID function to make our life easier. 
+-This week we plan to finish the documentation and get the code for the steel ball working. We also want to consider trying to use an auto PID function to make our life easier.  Finally, we want to make a base for the project so that we can store everything in a box and not have it all out.
  
 # CODE
 ## Camera Code + Detection
