@@ -360,13 +360,13 @@ As of 4/26/23 we need to redesign the base plate and make a more structurally so
 # FINAL CODE
 # Reflection
 ## Look out for...
-* The PiGPIO library for the servos requires you to ```py sudo pigpiod ``` after a restart. Don't know why, but it doesnt work otherwise. Here is the error message: ```sudo Can't connect to pigpio at 127.0.0.1(8888) ```
+* The PiGPIO library for the servos requires you to ``` sudo pigpiod ``` after a restart. Don't know why, but it doesnt work otherwise. Here is the error message: ``` Can't connect to pigpio at 127.0.0.1(8888) ```
 * The image recognition is very light sensative, and normally only works at a certain time of say. Use a wall or don't use it near a window.
 * The example code for the image recognition doesn't work off of the site, its library imports are bad and ineffective. Skip straight to using the final code.
 * The image recognition doesn't like reflections. Don't use acrylic for the plate.
 * The recording portion of OpenCV is bad, but the computer won't let you connect more than one object to the PiCamera.
 * The servos don't need as much of output capability as you think (PID code). Our prototype code lets the servos go from  -0.06 to 0.06 htz.
-* The camera module is on uneven ground, our design has two vertical supports that aren't perfectly vertical. With our camera in the middle, that means that our camera isnt perfectly centered. For an easy fix, you can change that in the setpoint in the  ```py x = PID(kP, kI, kD, setpoint = a)```
+* The camera module is on uneven ground, our design has two vertical supports that aren't perfectly vertical. With our camera in the middle, that means that our camera isnt perfectly centered. For an easy fix, you can change that in the setpoint in the  ```x = PID(kP, kI, kD, setpoint = a)```
 # CAD
 ## Milestone Reflection Questions
 * **What are the external dimensions of your design in mm (length, width, and height)?**
