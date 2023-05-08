@@ -373,7 +373,7 @@ Can't connect to pigpio at 127.0.0.1(8888)
 * The image recognition doesn't like reflections. Don't use acrylic for the plate.
 * The recording portion of OpenCV is bad, but the computer won't let you connect more than one object to the PiCamera.
 * The servos don't need as much of output capability as you think (PID code). Our prototype code lets the servos go from  -0.06 to 0.06 htz.
-* 
+* The camera module is on uneven ground, our design has two vertical supports that aren't perfectly vertical. With our camera in the middle, that means that our camera isnt perfectly centered. For an easy fix, you can change that in the setpoint in the  ```py x = PID(kP, kI, kD, setpoint = a)```
 # CAD
 ## Milestone Reflection Questions
 * **What are the external dimensions of your design in mm (length, width, and height)?**
