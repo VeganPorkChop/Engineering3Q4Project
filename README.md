@@ -360,7 +360,7 @@ As of 4/26/23 we need to redesign the base plate and make a more structurally so
 # FINAL CODE
 # Reflection
 ## Look out for...
-* The PiGPIO library for the servos requires you to ```sudo sudo pigpiod ``` after a restart. Don't know why, but it doesnt work otherwise. Here is the error message: ```sudo Can't connect to pigpio at 127.0.0.1(8888) ```
+* The PiGPIO library for the servos requires you to ```py sudo pigpiod ``` after a restart. Don't know why, but it doesnt work otherwise. Here is the error message: ```sudo Can't connect to pigpio at 127.0.0.1(8888) ```
 * The image recognition is very light sensative, and normally only works at a certain time of say. Use a wall or don't use it near a window.
 * The example code for the image recognition doesn't work off of the site, its library imports are bad and ineffective. Skip straight to using the final code.
 * The image recognition doesn't like reflections. Don't use acrylic for the plate.
