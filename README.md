@@ -372,9 +372,22 @@ As of 4/26/23 we need to redesign the base plate and make a more structurally so
 * The servos don't need as much of output capability as you think (PID code). Our prototype code lets the servos go from  -0.06 to 0.06 htz.
 * The camera module is on uneven ground, our design has two vertical supports that aren't perfectly vertical. With our camera in the middle, that means that our camera isnt perfectly centered. For an easy fix, you can change that in the setpoint in the  ```x = PID(kP, kI, kD, setpoint = a)```
 # CAD
+#### The design and build was much easier
+## First, the design
+Though there are many cool designs to control the balancing plate online, like
+
+<img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/b8c0fdc3-cc57-451e-9aa2-f6d77423c023" alt="The Base" height="300"> or <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/032f6ddb-b862-414b-bf0c-d7f8ed9b6d96" alt="The Base" height="300"> 
+
+which use more complex systems to create more precise or versatile movements, I went for the most basic of designs, which is one servo controls X, and the other controls Y. I orginally thought that we would need two servos per axis to balance out the weight of the servos, but the in the final design we decided to go with only one servo on each side.  
+
+<img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/bcc08654-6b73-426a-94b2-0dc8c912cedb" alt="The Base" height="600">
+
+Here is our final design and link to [CAD](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/227d4d17cb9859314779c081?renderMode=0&uiState=645a9a5b1180e771a10bf2bd)
+
+
 ## Milestone Reflection Questions
 * **What are the external dimensions of your design in mm (length, width, and height)?**
-The project in whole is 320mm x 250mm x 250mm(12.6in x 9.8in x 9.8in).
+The project in whole is 320mm x 250mm x 250mm (12.6in x 9.8in x 9.8in).
 * **How many fasteners (screws) are required for your design?**
 We have a total of __ fasteners in our design.
 * **What design changes have you made based on what you learned from your CAD model?**
