@@ -1,3 +1,21 @@
+# TOC
+* [PLANNING](#PLANNING)
+* [Checklist](#Checklist)
+* [Weekly Updates](#Weekly_Updates)
+* [CODE](#CODE)
+* [Camera Code + Detection](#Camera_Code_+_Detection)
+* [Servo Code](#Servo_Code)
+* [Camera Recording Code](#Camera_Recording_Code)
+* [PID Code](#PID_Code)
+* [CODE PROTOTYPE](#CODE_PROTOTYPE)
+* [Prototype Video](#Prototype_Video)
+* [CAD](#CAD)
+* [Design](#Design)
+* [Reflection](#Reflection)
+* [Build](#Build)
+* [Look out for](#Look_out_for...)
+* [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD:)
+* [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE:)
 # PLANNING
 ## Checklist
 * Create cad
@@ -184,7 +202,7 @@ while True:
     v = controlled_system.update(control)#IMPORTANT
 ```
 This code is a non-functioning example, it just shows how you'd call a function. The main lines are as marked, I suggest looking them up in the link to better understand the code.
-# CODE PROTOTYPE
+## CODE PROTOTYPE
 ```py
 import numpy as np
 from picamera import PiCamera
@@ -353,8 +371,7 @@ cv2.destroyAllWindows()
 
 
 # CAD
-#### The design and build was much easier
-## First, the design
+## Design
 Though there are many cool designs to control the balancing plate online, like
 
 <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/b8c0fdc3-cc57-451e-9aa2-f6d77423c023" alt="The Base" height="300"> or <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/032f6ddb-b862-414b-bf0c-d7f8ed9b6d96" alt="The Base" height="300"> 
