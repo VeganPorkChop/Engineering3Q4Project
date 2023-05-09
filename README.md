@@ -118,6 +118,7 @@ except KeyboardInterrupt:
 ```
 Unlike C++, Python bases its arduino code off of hertz. That means that instead of 180* is -0.5 to 0.5.
 ## Camera Recording Code
+[https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/](https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/)
 ```py
 # Python program to illustrate 
 # saving an operated video
