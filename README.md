@@ -346,8 +346,8 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 ## Prototype Video
-![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/91289762/234966713-8d4e86ee-c05f-425c-882f-11245f7f868c.gif)
-
+![Video1](https://user-images.githubusercontent.com/91289762/234966713-8d4e86ee-c05f-425c-882f-11245f7f868c.gif)
+![Video2](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/bc533349-fce9-4ae9-b79c-b90d916db971)
 ## Milestone Reflection Questions:
 * **What is your project?**
 Our project is an auto-ball balencing plate. Using PID in and outputs we plan to be able to make a ball stop in the center of the plate without human interference.
