@@ -348,29 +348,10 @@ cv2.destroyAllWindows()
 ## Prototype Video
 ![Video1](https://user-images.githubusercontent.com/91289762/234966713-8d4e86ee-c05f-425c-882f-11245f7f868c.gif)
 ![Video2](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/bc533349-fce9-4ae9-b79c-b90d916db971)
-## Milestone Reflection Questions:
-* **What is your project?**
-Our project is an auto-ball balencing plate. Using PID in and outputs we plan to be able to make a ball stop in the center of the plate without human interference.
-* **What components are connected to your Raspberry Pi?**
-There are very few components connected to our Pi, we have two servos, a camera module, and a batterypack connected to a switch.
-* **Explain (in detail) how your Code Prototype works**
-Our prototype is very simple. We combined all of the example code from above and put it all into one document. Our code initially creates 3 windows. One for each PID tuning and one for the camera. Then it creates slide bars so we can update the PID values real-time. Then it finds a ball on the camera, draws a dot on the center of it, and gives us its centerpoint. With that information we use our PID to get it as close to the center as possible. Then we find the slide bar values, update the PID and move the servos. Finally, the sequence starts over.
-* **What has been the hardest part?**
-The hardest part so far would definatly have been getting used to python. For the past 3 years I've done all of my coding in C++. This is my first time coding in python
-* **What have you learned along the way?**
-I've learned that one major differnce between C++ and Python is the variable definition. Python always assumes its a integer, whereas C++ makes you specify that. I've also learned that both Python and C++ are esentially the same, but just with different functions.
-* **What are your immediate next steps?**
-As of 4/26/23 we need to redesign the base plate and make a more structurally sound building, also re-level the servos so that they're not implicitly trying to throw our pingpong ball away. The next would be to complete our project milestones.
+
 # FINAL CODE
-# Reflection
-## Look out for...
-* The PiGPIO library for the servos requires you to ``` sudo pigpiod ``` after a restart. Don't know why, but it doesnt work otherwise. Here is the error message: ``` Can't connect to pigpio at 127.0.0.1(8888) ```
-* The image recognition is very light sensative, and normally only works at a certain time of say. Use a wall or don't use it near a window.
-* The example code for the image recognition doesn't work off of the site, its library imports are bad and ineffective. Skip straight to using the final code.
-* The image recognition doesn't like reflections. Don't use acrylic for the plate.
-* The recording portion of OpenCV is bad, but the computer won't let you connect more than one object to the PiCamera.
-* The servos don't need as much of output capability as you think (PID code). Our prototype code lets the servos go from  -0.06 to 0.06 htz.
-* The camera module is on uneven ground, our design has two vertical supports that aren't perfectly vertical. With our camera in the middle, that means that our camera isnt perfectly centered. For an easy fix, you can change that in the setpoint in the  ```x = PID(kP, kI, kD, setpoint = a)```
+
+
 # CAD
 #### The design and build was much easier
 ## First, the design
@@ -383,9 +364,23 @@ which use more complex systems to create more precise or versatile movements, I 
 <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/bcc08654-6b73-426a-94b2-0dc8c912cedb" alt="The Base" height="600">
 
 Here is our final design and link to [CAD](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/227d4d17cb9859314779c081?renderMode=0&uiState=645a9a5b1180e771a10bf2bd)
+# Reflection
+
+## Build
+Build, in this project, was a practice in "rolling with it". At one point, only two of the four servos were working, one of the brackets was broken, the camera was incredibly laggy, and yet we were still making progress on making it balance. In reflection, maybe we should have focused on those problems instead on 
+
+## Look out for...
+* The PiGPIO library for the servos requires you to ``` sudo pigpiod ``` after a restart. Don't know why, but it doesnt work otherwise. Here is the error message: ``` Can't connect to pigpio at 127.0.0.1(8888) ```
+* The image recognition is very light sensative, and normally only works at a certain time of say. Use a wall or don't use it near a window.
+* The example code for the image recognition doesn't work off of the site, its library imports are bad and ineffective. Skip straight to using the final code.
+* The image recognition doesn't like reflections. Don't use acrylic for the plate.
+* The recording portion of OpenCV is bad, but the computer won't let you connect more than one object to the PiCamera.
+* The servos don't need as much of output capability as you think (PID code). Our prototype code lets the servos go from  -0.06 to 0.06 htz.
+* The camera module is on uneven ground, our design has two vertical supports that aren't perfectly vertical. With our camera in the middle, that means that our camera isnt perfectly centered. For an easy fix, you can change that in the setpoint in the  ```x = PID(kP, kI, kD, setpoint = a)```
 
 
-## Milestone Reflection Questions
+
+## Milestone Reflection Questions CAD:
 * **What are the external dimensions of your design in mm (length, width, and height)?**
 The project in whole is 320mm x 250mm x 250mm (12.6in x 9.8in x 9.8in).
 * **How many fasteners (screws) are required for your design?**
@@ -393,3 +388,18 @@ We have a total of __ fasteners in our design.
 * **What design changes have you made based on what you learned from your CAD model?**
 We changed from a double servo per axis design to a single servo per axis with a bearing on the other end. We heightened the camera for a better angle, and also to increase its sights so that we could crop the image and make the code run faster. We changed the size of the balence plate so that there was a larger margin of error. Finally, we added a weight to the base because the whole design kept falling over because the plate juts too far out.
 * [Onshape Doc](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/f19878d97a4d184786ee9736)
+
+
+## Milestone Reflection Questions CODE:
+* **What is your project?**
+Our project is an auto-ball balencing plate. Using PID in and outputs we plan to be able to make a ball stop in the center of the plate without human interference.
+* **What components are connected to your Raspberry Pi?**
+There are very few components connected to our Pi, we have two servos, a camera module, and a batterypack connected to a switch.
+* **Explain (in detail) how your Code Prototype works**
+Our prototype is very simple. We combined all of the example code from above and put it all into one document. Our code initially creates 3 windows. One for each PID tuning and one for the camera. Then it creates slide bars so we can update the PID values real-time. Then it finds a ball on the camera, draws a dot on the center of it, and gives us its centerpoint. With that information we use our PID to get it as close to the center as possible. Then we find the slide bar values, update the PID and move the servos. Finally, the sequence starts over.
+* **What has been the hardest part?**
+The hardest part so far would definatly have been getting used to python. For the past 3 years I've done all of my coding in C++. This is my first time coding in python
+* **What have you learned along the way?**
+I've learned that one major differnce between C++ and Python is the variable definition. Python always assumes its a integer, whereas C++ makes you specify that. I've also learned that both Python and C++ are esentially the same, but just with different functions.
+* **What are your immediate next steps?**
+As of 4/26/23 we need to redesign the base plate and make a more structurally sound building, also re-level the servos so that they're not implicitly trying to throw our pingpong ball away. The next would be to complete our project milestones.
