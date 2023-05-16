@@ -35,6 +35,8 @@
 -The code is all put together and functions well, but the camera recognition isn't completly consistent so the box can never truly decide where the center of the pingpong ball is so its very jittery. This week we intend to finish the code and have the ball balencing. We're also going to add some quality of life attachments next time, and different possible balensable objects. Our teacher placed an order for steel balls, so those might be better.
 * Week 5/8-13
 -This week we plan to finish the documentation and get the code for the steel ball working. We also want to consider trying to use an auto PID function to make our life easier.  Finally, we want to make a base for the project so that we can store everything in a box and not have it all out.
+* Week 5/15-19
+-This week we realize how much time we have left in the school year, and to prevent us from failing our project will drop the extra stuff. The metal balls were too heavy for the servos. The base will be completed and finally we will get our preject graded.
  
 # CODE
 ## Camera_Code_+_Detection
@@ -661,6 +663,10 @@ Though there are many cool designs to control the balancing plate online, like
 which use more complex systems to create more precise or versatile movements, I went for the most basic of designs, which is one servo controls X, and the other controls Y. I orginally thought that we would need two servos per axis to balance out the weight of the servos, but the in the final design we decided to go with only one servo on each side.  
 
 <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/bcc08654-6b73-426a-94b2-0dc8c912cedb" alt="The Base" height="600">
+![unnamed](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/93e8217c-e8d2-407a-9175-5b58d45c8249)
+![unnamed](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/1d50daa9-9097-4605-bed4-56e066fa708a)
+![unnamed](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/9d3b1861-9b51-41eb-960c-be7101e23590)
+![unnamed](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/58831604-976d-44c3-b6ef-e9a185bcdce3)
 
 Here is our final design and link to [CAD](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/227d4d17cb9859314779c081?renderMode=0&uiState=645a9a5b1180e771a10bf2bd)
 # Reflection
