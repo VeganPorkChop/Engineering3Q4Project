@@ -14,8 +14,8 @@
 * [Reflection](#Reflection)
 * [Build](#Build)
 * [Look out for](#Look_out_for...)
-* [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD:)
-* [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE:)
+* [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD)
+* [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE)
 # PLANNING
 ## Checklist
 * Create cad
@@ -397,7 +397,7 @@ Build, in this project, was a practice in "rolling with it". At one point, only 
 
 
 
-## Milestone_Reflection_Questions_CAD:
+## Milestone_Reflection_Questions_CAD
 * **What are the external dimensions of your design in mm (length, width, and height)?**
 The project in whole is 320mm x 250mm x 250mm (12.6in x 9.8in x 9.8in).
 * **How many fasteners (screws) are required for your design?**
@@ -407,7 +407,7 @@ We changed from a double servo per axis design to a single servo per axis with a
 * [Onshape Doc](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/f19878d97a4d184786ee9736)
 
 
-## Milestone_Reflection_Questions_CODE:
+## Milestone_Reflection_Questions_CODE
 * **What is your project?**
 Our project is an auto-ball balencing plate. Using PID in and outputs we plan to be able to make a ball stop in the center of the plate without human interference.
 * **What components are connected to your Raspberry Pi?**
