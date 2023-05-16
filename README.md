@@ -7,6 +7,7 @@
 * [Servo Code](#Servo_Code)
 * [Camera Recording Code](#Camera_Recording_Code)
 * [PID Code](#PID_Code)
+* [Camera Recognition Tuning](#Camera_Recognition_Tuning)
 * [CODE PROTOTYPE](#CODE_PROTOTYPE)
 * [Prototype Video](#Prototype_Video)
 * [CAD](#CAD)
@@ -202,6 +203,122 @@ while True:
     v = controlled_system.update(control)#IMPORTANT
 ```
 This code is a non-functioning example, it just shows how you'd call a function. The main lines are as marked, I suggest looking them up in the link to better understand the code.
+## Camera_Recognition_Tuning
+```py
+import numpy as np
+from picamera import PiCamera
+import cv2
+
+
+
+
+kernel = np.ones((5,5),np.uint8)
+
+# Take input from webcam
+cap = cv2.VideoCapture(-1)
+
+# Reduce the size of video to 320x240 so rpi can process faster
+cap.set(3,160)
+cap.set(4,160)
+
+def nothing(x):
+    pass
+# Creating a windows for later use
+cv2.namedWindow('HueComp')
+cv2.namedWindow('SatComp')
+cv2.namedWindow('ValComp')
+cv2.namedWindow('closing')
+cv2.namedWindow('tracking')
+
+
+# Creating track bar for min and max for hue, saturation and value
+# You can adjust the defaults as you like
+cv2.createTrackbar('hmin', 'HueComp',38,179,nothing)
+cv2.createTrackbar('hmax', 'HueComp',92,179,nothing)
+
+cv2.createTrackbar('smin', 'SatComp',48,255,nothing)
+cv2.createTrackbar('smax', 'SatComp',245,255,nothing)
+
+cv2.createTrackbar('vmin', 'ValComp',176,255,nothing)
+cv2.createTrackbar('vmax', 'ValComp',255,255,nothing)
+
+# My experimental values
+
+
+
+while(1):
+    
+    buzz = 0
+    _, frame = cap.read()
+
+    #converting to HSV
+    hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
+    hue,sat,val = cv2.split(hsv)
+
+    # get info from track bar and appy to result
+    hmn = cv2.getTrackbarPos('hmin','HueComp')
+    hmx = cv2.getTrackbarPos('hmax','HueComp')
+    
+
+    smn = cv2.getTrackbarPos('smin','SatComp')
+    smx = cv2.getTrackbarPos('smax','SatComp')
+
+
+    vmn = cv2.getTrackbarPos('vmin','ValComp')
+    vmx = cv2.getTrackbarPos('vmax','ValComp')
+
+    # Apply thresholding
+    hthresh = cv2.inRange(np.array(hue),np.array(hmn),np.array(hmx))
+    sthresh = cv2.inRange(np.array(sat),np.array(smn),np.array(smx))
+    vthresh = cv2.inRange(np.array(val),np.array(vmn),np.array(vmx))
+
+    # AND h s and v
+    tracking = cv2.bitwise_and(hthresh,cv2.bitwise_and(sthresh,vthresh))
+
+    # Some morpholigical filtering
+    dilation = cv2.dilate(tracking,kernel,iterations = 1)
+    closing = cv2.morphologyEx(dilation, cv2.MORPH_CLOSE, kernel)
+    closing = cv2.GaussianBlur(closing,(5,5),0)
+
+    # Detect circles using HoughCircles
+    circles = cv2.HoughCircles(closing,cv2.HOUGH_GRADIENT,2,240,param1=120,param2=10,minRadius=10,maxRadius=0)
+    # circles = np.uint16(np.around(circles))
+
+    #Draw Circles
+    if circles is not None:
+            for i in circles[0,:]:
+                # If the ball is far, draw it in green
+                print (i[0], i[1])
+                
+                if int(round(i[2])) < 30:
+                    cv2.circle(frame,(int(round(i[0])),int(round(i[1]))),int(round(i[2])),(0,255,0),5)
+                    cv2.circle(frame,(int(round(i[0])),int(round(i[1]))),2,(0,255,0),10)
+                elif int(round(i[2])) > 35:
+                    cv2.circle(frame,(int(round(i[0])),int(round(i[1]))),int(round(i[2])),(0,0,255),5)
+                    cv2.circle(frame,(int(round(i[0])),int(round(i[1]))),2,(0,0,255),10)
+                    buzz = 1
+
+	#you can use the 'buzz' variable as a trigger to switch some GPIO lines on Rpi :)
+    # print buzz                    
+    # if buzz:
+        # put your GPIO line here
+
+    
+    #Show the result in frames
+    cv2.imshow('HueComp',hthresh)
+    cv2.imshow('SatComp',sthresh)
+    cv2.imshow('ValComp',vthresh)
+    cv2.imshow('closing',closing)
+    cv2.imshow('tracking',frame)
+
+    k = cv2.waitKey(5) & 0xFF
+    if k == 27:
+        break
+
+cap.release()
+
+cv2.destroyAllWindows()
+```
 ## CODE_PROTOTYPE
 ```py
 import numpy as np
@@ -368,8 +485,172 @@ cv2.destroyAllWindows()
 ![Video2](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/bc533349-fce9-4ae9-b79c-b90d916db971)
 
 # FINAL_CODE
+```py
+import numpy as np
+import cv2
+from simple_pid import PID
+from gpiozero import Servo
+import time
+from picamera import PiCamera
+from gpiozero.pins.pigpio import PiGPIOFactory
+from gpiozero import Device
+import subprocess 
+import os
+
+#camera = PiCamera()
+#camera.start_recording('/home/pi/Videos/penis.h264')
+
+Xval = 0
+Yval = 0 
+servoOutputX = 0
+servoOutputY = 0
+Xcenter = 0.0
+Ycenter = 0.12
+SPX = 80
+SPY = 80
+OutputLimit = .08
+PID.sample_time = 10
+#subprocess.Popen(["pigpiod"])
+
+kernel = np.ones((5,5),np.uint8)
+
+# Take input from webcam
+filename = '/home/pi/Videos/FunctionalVideo.avi'
+frames_per_second = 24.0
 
 
+# Video Encoding, might require additional installs
+# Types of Codes: http://www.fourcc.org/codecs.php
+VIDEO_TYPE = {
+    'avi': cv2.VideoWriter_fourcc(*'XVID'),
+}
+
+def get_video_type(filename):
+    filename, ext = os.path.splitext(filename)
+    if ext in VIDEO_TYPE:
+      return  VIDEO_TYPE[ext]
+    return VIDEO_TYPE['avi']
+
+
+
+cap = cv2.VideoCapture(0)
+out = cv2.VideoWriter(filename, get_video_type(filename), 25, (SPX*2, SPY*2))
+
+
+# Reduce the size of video to 320x240 so rpi can process faster
+cap.set(3,SPX*2)
+cap.set(4,SPY*2)
+
+def nothing(x):
+    pass
+# Creating a windows for later use
+cv2.namedWindow('PID')
+
+
+# Creating track bar for min and max for PID
+# You can adjust the defaults as you like
+cv2.createTrackbar('P', 'PID',130,500,nothing)
+cv2.createTrackbar('I', 'PID',100,500,nothing)
+cv2.createTrackbar('D', 'PID',70,500,nothing)
+Device.pin_factory = PiGPIOFactory()
+
+
+servoX = Servo(19)
+servoY = Servo(13)
+
+pidX = PID(0.07, 0.05, 0.03, setpoint=SPX)
+pidX.output_limits = (-OutputLimit, OutputLimit)
+pidY = PID(0.07, 0.05, 0.03, setpoint=SPY)
+pidY.output_limits = (-OutputLimit, OutputLimit)
+try:
+    while(1):
+        ret, frame = cap.read()
+        out.write(frame)
+
+        #converting to HSV
+        hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
+        hue,sat,val = cv2.split(hsv)
+        
+        hmn = 49
+        hmx = 83
+        
+
+        smn = 48
+        smx = 245
+
+
+        vmn = 95
+        vmx = 176
+
+        # get info from track bar and appy to result
+        p = cv2.getTrackbarPos('P','PID')
+        i = cv2.getTrackbarPos('I','PID')
+        d = cv2.getTrackbarPos('D','PID')
+        
+
+        # Apply thresholding
+        hthresh = cv2.inRange(np.array(hue),np.array(hmn),np.array(hmx))
+        sthresh = cv2.inRange(np.array(sat),np.array(smn),np.array(smx))
+        vthresh = cv2.inRange(np.array(val),np.array(vmn),np.array(vmx))
+
+        # AND h s and v
+        tracking = cv2.bitwise_and(hthresh,cv2.bitwise_and(sthresh,vthresh))
+
+        # Some morpholigical filtering
+        dilation = cv2.dilate(tracking,kernel,iterations = 1)
+        closing = cv2.morphologyEx(dilation, cv2.MORPH_CLOSE, kernel)
+        closing = cv2.GaussianBlur(closing,(5,5),0)
+
+        # Detect circles using HoughCircles
+        circles = cv2.HoughCircles(closing,cv2.HOUGH_GRADIENT,2,240,param1=120,param2=10,minRadius=10,maxRadius=0)
+        # circles = np.uint16(np.around(circles))
+
+        #Draw Circles
+        if circles is not None:
+            for ii in circles[0,:]:
+                # If the ball is far, draw it in green
+                Xval = ii[0]
+                Yval = ii[1]
+                cv2.circle(frame,(int(round(ii[0])),int(round(ii[1]))),2,(0,255,0),10)
+
+    #you can use the 'buzz' variable as a trigger to switch some GPIO lines on Rpi :)
+        # print buzz                    
+        # if buzz:
+            # put your GPIO line here
+
+        
+        XmyP = float(p)/1000.0
+        XmyI = float(i)/1000.0
+        XmyD = float(d)/1000.0
+        YmyP = float(p)/1000.0
+        YmyI = float(i)/1000.0
+        YmyD = float(d)/1000.0
+
+        pidX.tunings = (XmyP,XmyI,XmyD)
+        pidY.tunings = (YmyP,YmyI,YmyD)
+        
+        servoOutputX = -1 * pidX(Xval)
+        servoX.value = servoOutputX + Xcenter
+        servoOutputY = pidY(Yval)
+        servoY.value = servoOutputY + Ycenter
+
+        
+        cv2.imshow('PID',frame)
+        
+        
+        #print("PIDY", YmyP, YmyI, YmyD)
+        #print("PIDX", XmyP, XmyI, XmyD)
+        print("COORDANITES:", "(",Xval,",",Yval,")")
+        #print("SERVO VALUES:", servoOutputX, servoOutputY)
+        k = cv2.waitKey(5) & 0xFF
+        if k == 27:
+            break
+except KeyboardInterrupt:
+    pass
+cap.release()
+out.release()
+cv2.destroyAllWindows()
+```
 # CAD
 ## Design
 Though there are many cool designs to control the balancing plate online, like
