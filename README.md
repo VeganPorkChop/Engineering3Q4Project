@@ -11,6 +11,7 @@
 * [CODE PROTOTYPE](#CODE_PROTOTYPE)
 * [Prototype Video](#Prototype_Video)
 * [Final Code](#FINAL_CODE)
+* [Final Video](#FINAL_VIDEO)
 * [CAD](#CAD)
 * [Design](#Design)
 * [Reflection](#Reflection)
@@ -654,6 +655,8 @@ cap.release()
 out.release()
 cv2.destroyAllWindows()
 ```
+# FINAL_VIDEO
+![ezgif com-gif-maker](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/ae9d6a03-25a1-4e1a-895a-247433709c73)
 # CAD
 ## Design
 Though there are many cool designs to control the balancing plate online, like
