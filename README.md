@@ -10,6 +10,7 @@
 * [Camera Recognition Tuning](#Camera_Recognition_Tuning)
 * [CODE PROTOTYPE](#CODE_PROTOTYPE)
 * [Prototype Video](#Prototype_Video)
+* [Final Code](#FINAL_CODE)
 * [CAD](#CAD)
 * [Design](#Design)
 * [Reflection](#Reflection)
