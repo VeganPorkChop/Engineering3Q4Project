@@ -666,8 +666,9 @@ which use more complex systems to create more precise or versatile movements, I 
 <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/93e8217c-e8d2-407a-9175-5b58d45c8249" alt="The Base" height="600">
 <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/1d50daa9-9097-4605-bed4-56e066fa708a" alt="The Base" height="600">
 <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/9d3b1861-9b51-41eb-960c-be7101e23590" alt="The Base" height="600">
-<img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/58831604-976d-44c3-b6ef-e9a185bcdce3" alt="The Base" height="600">
-Here is our final design and link to [CAD](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/227d4d17cb9859314779c081?renderMode=0&uiState=645a9a5b1180e771a10bf2bd)
+
+
+* Here is our final design and link to [CAD](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/227d4d17cb9859314779c081?renderMode=0&uiState=645a9a5b1180e771a10bf2bd)
 # Reflection
 
 ## Build
