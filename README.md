@@ -25,7 +25,7 @@
 * Create PID code
 * Combine all code
 * Finish documentation
-### Weekly Updates
+### Weekly_Updates
 * Week 4/24-31
  -Documentation just started and all the code functions individually except for the pid code. It, in concept, functions perfectly, but needs lots of tuning.
  -One problem we have is that the servos are off center, originally we thought about changing the set point of the PID function to accomidate, but instead of dealing with I we decided to level the servo instead and offset its degrees.
@@ -35,7 +35,7 @@
 -This week we plan to finish the documentation and get the code for the steel ball working. We also want to consider trying to use an auto PID function to make our life easier.  Finally, we want to make a base for the project so that we can store everything in a box and not have it all out.
  
 # CODE
-## Camera Code + Detection
+## Camera_Code_+_Detection
 http://trevorappleton.blogspot.com/2013/11/python-getting-started-with-opencv.html
 ```py
 import os
@@ -91,7 +91,7 @@ cv2.imshow("img",img)
 cv2.waitKey(0)
 ```
 This code uses OpenCV to edge detect using Hue Saturation and Color, it combines the three and out pops your circle. The explination and how to install is all of the link.
-## Servo Code
+## Servo_Code
 https://gist.github.com/elktros/384443b57a33f399a4acba76191e0e63
 ```py
 import RPi.GPIO as GPIO
@@ -135,7 +135,7 @@ except KeyboardInterrupt:
     GPIO.cleanup()
 ```
 Unlike C++, Python bases its arduino code off of hertz. That means that instead of 180* is -0.5 to 0.5.
-## Camera Recording Code
+## Camera_Recording_Code
 [https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/](https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/)
 ```py
 # Python program to illustrate 
@@ -185,7 +185,7 @@ out.release()
 # De-allocate any associated memory usage 
 cv2.destroyAllWindows()
 ```
-## PID Code
+## PID_Code
 https://pypi.org/project/simple-pid/
 ```py
 from simple_pid import PID
@@ -202,7 +202,7 @@ while True:
     v = controlled_system.update(control)#IMPORTANT
 ```
 This code is a non-functioning example, it just shows how you'd call a function. The main lines are as marked, I suggest looking them up in the link to better understand the code.
-## CODE PROTOTYPE
+## CODE_PROTOTYPE
 ```py
 import numpy as np
 from picamera import PiCamera
@@ -363,11 +363,11 @@ cap.release()
 
 cv2.destroyAllWindows()
 ```
-## Prototype Video
+## Prototype_Video
 ![Video1](https://user-images.githubusercontent.com/91289762/234966713-8d4e86ee-c05f-425c-882f-11245f7f868c.gif)
 ![Video2](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/bc533349-fce9-4ae9-b79c-b90d916db971)
 
-# FINAL CODE
+# FINAL_CODE
 
 
 # CAD
@@ -386,7 +386,7 @@ Here is our final design and link to [CAD](https://cvilleschools.onshape.com/doc
 ## Build
 Build, in this project, was a practice in "rolling with it". At one point, only two of the four servos were working, one of the brackets was broken, the camera was incredibly laggy, and yet we were still making progress on making it balance. In reflection, maybe we should have focused on those problems instead on 
 
-## Look out for...
+## Look_out_for...
 * The PiGPIO library for the servos requires you to ``` sudo pigpiod ``` after a restart. Don't know why, but it doesnt work otherwise. Here is the error message: ``` Can't connect to pigpio at 127.0.0.1(8888) ```
 * The image recognition is very light sensative, and normally only works at a certain time of say. Use a wall or don't use it near a window.
 * The example code for the image recognition doesn't work off of the site, its library imports are bad and ineffective. Skip straight to using the final code.
@@ -397,7 +397,7 @@ Build, in this project, was a practice in "rolling with it". At one point, only 
 
 
 
-## Milestone Reflection Questions CAD:
+## Milestone_Reflection_Questions_CAD:
 * **What are the external dimensions of your design in mm (length, width, and height)?**
 The project in whole is 320mm x 250mm x 250mm (12.6in x 9.8in x 9.8in).
 * **How many fasteners (screws) are required for your design?**
@@ -407,7 +407,7 @@ We changed from a double servo per axis design to a single servo per axis with a
 * [Onshape Doc](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/f19878d97a4d184786ee9736)
 
 
-## Milestone Reflection Questions CODE:
+## Milestone_Reflection_Questions_CODE:
 * **What is your project?**
 Our project is an auto-ball balencing plate. Using PID in and outputs we plan to be able to make a ball stop in the center of the plate without human interference.
 * **What components are connected to your Raspberry Pi?**
