@@ -16,6 +16,8 @@
 * [CAD](#CAD)
 * [Design](#Design)
 * [Reflection](#Reflection)
+* [Build Reflection](#Build_Reflection)
+* [ode Reflection](#Code_Reflection) 
 * [Look out for](#Look_out_for...)
 * [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD)
 * [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE)
