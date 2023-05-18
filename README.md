@@ -680,9 +680,11 @@ which use more complex systems to create more precise or versatile movements, I 
 
 * Here is our final design and link to [CAD](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/227d4d17cb9859314779c081?renderMode=0&uiState=645a9a5b1180e771a10bf2bd)
 # Reflection
-
-## Build
+## Build_Reflection
 Build, in this project, was a practice in "rolling with it". At one point, only two of the four servos were working, one of the brackets was broken, the camera was incredibly laggy, and yet we were still making progress on making it balance. In reflection, maybe we should have focused on those problems instead on 
+
+## Code_Reflection
+The code works great. the main problem is that the image recegnition isnt perfect. 
 
 ## Look_out_for...
 * The PiGPIO library for the servos requires you to ``` sudo pigpiod ``` after a restart. Don't know why, but it doesnt work otherwise. Here is the error message: ``` Can't connect to pigpio at 127.0.0.1(8888) ```
