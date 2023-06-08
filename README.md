@@ -34,6 +34,21 @@ Constraints:
 * We didn't have a camera that connected to an arduino, so we needed to learn how to a raspberry pi
 
 Full Planning Doc and Schedule: [Planning Doc]()  
+<details>
+  <summary>Material List</summary>
+
+* Acryllic
+* 2 Servos
+* Raspbery Pi
+* Switch
+* LED
+* Breadboard
+* M-F Aluminum Standoffs
+* Pi Cobbler
+* Keyboard
+* Mouse
+* Monitor
+</details>
 
 ### Weekly_Updates
 * Week 4/24-31
