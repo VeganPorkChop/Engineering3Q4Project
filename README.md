@@ -1,26 +1,26 @@
 # TOC
-	* [PLANNING](#PLANNING)
-	* [Checklist](#Checklist)
-	* [Weekly Updates](#Weekly_Updates)
-	* [CODE](#CODE)
-	* [Camera Code + Detection](#Camera_Code_+_Detection)
-	* [Servo Code](#Servo_Code)
-	* [Camera Recording Code](#Camera_Recording_Code)
-	* [PID Code](#PID_Code)
-	* [Camera Recognition Tuning](#Camera_Recognition_Tuning)
-	* [CODE PROTOTYPE](#CODE_PROTOTYPE)
-	* [Prototype Video](#Prototype_Video)
-	* [Final Code](#FINAL_CODE)
-	* [Final Video](#FINAL_VIDEO)
-	* [Wiring](#Wiring)
-	* [CAD](#CAD)
-	* [Design](#Design)
-	* [Reflection](#Reflection)
-	* [Build Reflection](#Build_Reflection)
-	* [ode Reflection](#Code_Reflection) 
-	* [Look out for](#Look_out_for...)
-	* [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD)
-	* [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE)
+* [PLANNING](#PLANNING)
+* [Checklist](#Checklist)
+* [Weekly Updates](#Weekly_Updates)
+* [CODE](#CODE)
+* [Camera Code + Detection](#Camera_Code_+_Detection)
+* [Servo Code](#Servo_Code)
+* [Camera Recording Code](#Camera_Recording_Code)
+* [PID Code](#PID_Code)
+* [Camera Recognition Tuning](#Camera_Recognition_Tuning)
+* [CODE PROTOTYPE](#CODE_PROTOTYPE)
+* [Prototype Video](#Prototype_Video)
+* [Final Code](#FINAL_CODE)
+* [Final Video](#FINAL_VIDEO)
+* [Wiring](#Wiring)
+* [CAD](#CAD)
+* [Design](#Design)
+* [Reflection](#Reflection)
+* [Build Reflection](#Build_Reflection)
+* [ode Reflection](#Code_Reflection) 
+* [Look out for](#Look_out_for...)
+* [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD)
+* [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE)
 # PLANNING
 ## Checklist
 * Create cad
@@ -100,7 +100,7 @@ cv2.imshow("img",img)
 
 cv2.waitKey(0)
 ```
-</details1>
+</details>
 
 This code uses OpenCV to edge detect using Hue Saturation and Color, it combines the three and out pops your circle. The explination and how to install is all of the link.
 ## Servo_Code
