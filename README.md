@@ -18,6 +18,16 @@
 * We have too little time to complete a project of this difficulty
 * One servo will not be enough to turn it fast enough
 
+
+| Type | Dates | Goals |
+| ------ | ------ | ----- |
+| **RESEARCH** | **Dates:** 4/19 - 4/24 | **Goals:** Finish Research |
+| **DESIGN** | **Dates:** 4/24 - 5/5 | **Goals:** Kaz finishes CAD and assembles |
+| **CODING** | **Dates:** 4/24 - 5/5 | **Goals:** Graham finishes prototype code and starts to debug |
+| **DOCUMENTING** | **Dates:** 4/19 - 5/19 | **Goals:** Finish in-depth documentation, include reflection and required parts |
+
+
+
 <details>
   <summary>Material List</summary>
 
