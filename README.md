@@ -43,7 +43,7 @@
  
 # CODE
 ## Camera_Code_+_Detection
-http://trevorappleton.blogspot.com/2013/11/python-getting-started-with-opencv.html
+* [Website](http://trevorappleton.blogspot.com/2013/11/python-getting-started-with-opencv.html)
 <details>
   <summary>Camera Code</summary>
 	
@@ -102,7 +102,7 @@ cv2.waitKey(0)
 ```
 This code uses OpenCV to edge detect using Hue Saturation and Color, it combines the three and out pops your circle. The explination and how to install is all of the link.
 ## Servo_Code
-https://gist.github.com/elktros/384443b57a33f399a4acba76191e0e63
+* [Website](https://gist.github.com/elktros/384443b57a33f399a4acba76191e0e63)
 <details>
   <summary>Servo Code</summary>
 	
@@ -153,7 +153,7 @@ Unlike C++, Python bases its arduino code off of hertz. That means that instead 
 </details>
 
 ## Camera_Recording_Code
-[https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/](https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/)
+* [Website](https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/)
 <details>
   <summary>Recording Code</summary>
 ```py
@@ -207,7 +207,7 @@ cv2.destroyAllWindows()
 </details>
 
 ## PID_Code
-https://pypi.org/project/simple-pid/
+* [Website](https://pypi.org/project/simple-pid/)
 <details>
   <summary>PID Code</summary>
 	
