@@ -1,7 +1,4 @@
 # TOC
-<details>
-  <summary>Click me</summary>
-	
 	* [PLANNING](#PLANNING)
 	* [Checklist](#Checklist)
 	* [Weekly Updates](#Weekly_Updates)
@@ -24,8 +21,6 @@
 	* [Look out for](#Look_out_for...)
 	* [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD)
 	* [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE)
-	
-</details>
 # PLANNING
 ## Checklist
 * Create cad
@@ -49,6 +44,9 @@
 # CODE
 ## Camera_Code_+_Detection
 http://trevorappleton.blogspot.com/2013/11/python-getting-started-with-opencv.html
+
+<details>
+  <summary>Click me</summary>
 ```py
 import os
 import cv2
@@ -102,6 +100,8 @@ cv2.imshow("img",img)
 
 cv2.waitKey(0)
 ```
+</details1>
+
 This code uses OpenCV to edge detect using Hue Saturation and Color, it combines the three and out pops your circle. The explination and how to install is all of the link.
 ## Servo_Code
 https://gist.github.com/elktros/384443b57a33f399a4acba76191e0e63
