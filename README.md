@@ -1,6 +1,6 @@
 # TOC
 * [PLANNING](#PLANNING)
-* [Checklist](#Checklist)
+* [Goal](#Goal)
 * [Weekly Updates](#Weekly_Updates)
 * [CODE](#CODE)
 * [Camera Code + Detection](#Camera_Code_+_Detection)
@@ -17,19 +17,24 @@
 * [Design](#Design)
 * [Reflection](#Reflection)
 * [Build Reflection](#Build_Reflection)
-* [ode Reflection](#Code_Reflection) 
+* [Code Reflection](#Code_Reflection) 
 * [Look out for](#Look_out_for...)
 * [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD)
 * [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE)
 # PLANNING
-## Checklist
-* Create cad
-* Create camera code
-* Use camera to detect ball
-* Create servo code
-* Create PID code
-* Combine all code
-* Finish documentation
+
+## Goal 
+Create a working 2Dof ball balancer, like as seen in [This Video](https://www.youtube.com/watch?v=uRQepbnxg7w), utlizing PID control to optimize balancing.
+Criteria: 
+* Use PID
+* Balance the ball
+Constraints:
+* We need to a camera and camera recognition to track the ball, as alternatives were too expensive
+* We didn't want to use kinematics to control the plate
+* We didn't have a camera that connected to an arduino, so we needed to learn how to a raspberry pi
+
+Full Planning Doc and Schedule: [Planning Doc]()  
+
 ### Weekly_Updates
 * Week 4/24-31
  -Documentation just started and all the code functions individually except for the pid code. It, in concept, functions perfectly, but needs lots of tuning.
