@@ -45,8 +45,6 @@
 ## Camera_Code_+_Detection
 http://trevorappleton.blogspot.com/2013/11/python-getting-started-with-opencv.html
 
-<details>
-  <summary>Click me</summary>
 ```py
 import os
 import cv2
@@ -100,8 +98,6 @@ cv2.imshow("img",img)
 
 cv2.waitKey(0)
 ```
-</details>
-
 This code uses OpenCV to edge detect using Hue Saturation and Color, it combines the three and out pops your circle. The explination and how to install is all of the link.
 ## Servo_Code
 https://gist.github.com/elktros/384443b57a33f399a4acba76191e0e63
@@ -700,29 +696,3 @@ The code works great. the main problem is that the image recognition isnt perfec
 * The recording portion of OpenCV is bad, but the computer won't let you connect more than one object to the PiCamera.
 * The servos don't need as much of output capability as you think (PID code). Our prototype code lets the servos go from  -0.06 to 0.06 htz.
 * The camera module is on uneven ground, our design has two vertical supports that aren't perfectly vertical. With our camera in the middle, that means that our camera isnt perfectly centered. For an easy fix, you can change that in the setpoint in the  ```x = PID(kP, kI, kD, setpoint = a)```
-
-
-
-## Milestone_Reflection_Questions_CAD
-* **What are the external dimensions of your design in mm (length, width, and height)?**
-The project in whole is 320mm x 250mm x 250mm (12.6in x 9.8in x 9.8in).
-* **How many fasteners (screws) are required for your design?**
-We have a total of __ fasteners in our design.
-* **What design changes have you made based on what you learned from your CAD model?**
-We changed from a double servo per axis design to a single servo per axis with a bearing on the other end. We heightened the camera for a better angle, and also to increase its sights so that we could crop the image and make the code run faster. We changed the size of the balence plate so that there was a larger margin of error. Finally, we added a weight to the base because the whole design kept falling over because the plate juts too far out.
-* [Onshape Doc](https://cvilleschools.onshape.com/documents/2733d03459af870860d20d9e/w/29cc8494b29da55394609a40/e/f19878d97a4d184786ee9736)
-
-
-## Milestone_Reflection_Questions_CODE
-* **What is your project?**
-Our project is an auto-ball balencing plate. Using PID in and outputs we plan to be able to make a ball stop in the center of the plate without human interference.
-* **What components are connected to your Raspberry Pi?**
-There are very few components connected to our Pi, we have two servos, a camera module, and a batterypack connected to a switch.
-* **Explain (in detail) how your Code Prototype works**
-Our prototype is very simple. We combined all of the example code from above and put it all into one document. Our code initially creates 3 windows. One for each PID tuning and one for the camera. Then it creates slide bars so we can update the PID values real-time. Then it finds a ball on the camera, draws a dot on the center of it, and gives us its centerpoint. With that information we use our PID to get it as close to the center as possible. Then we find the slide bar values, update the PID and move the servos. Finally, the sequence starts over.
-* **What has been the hardest part?**
-The hardest part so far would definatly have been getting used to python. For the past 3 years I've done all of my coding in C++. This is my first time coding in python
-* **What have you learned along the way?**
-I've learned that one major differnce between C++ and Python is the variable definition. Python always assumes its a integer, whereas C++ makes you specify that. I've also learned that both Python and C++ are esentially the same, but just with different functions.
-* **What are your immediate next steps?**
-As of 4/26/23 we need to redesign the base plate and make a more structurally sound building, also re-level the servos so that they're not implicitly trying to throw our pingpong ball away. The next would be to complete our project milestones.
