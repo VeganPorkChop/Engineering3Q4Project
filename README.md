@@ -45,7 +45,7 @@
 ## Camera_Code_+_Detection
 http://trevorappleton.blogspot.com/2013/11/python-getting-started-with-opencv.html
 <details>
-  <summary>Click me</summary>
+  <summary>Camera Code</summary>
 	
 ```py
 import os
@@ -103,6 +103,9 @@ cv2.waitKey(0)
 This code uses OpenCV to edge detect using Hue Saturation and Color, it combines the three and out pops your circle. The explination and how to install is all of the link.
 ## Servo_Code
 https://gist.github.com/elktros/384443b57a33f399a4acba76191e0e63
+<details>
+  <summary>Servo Code</summary>
+	
 ```py
 import RPi.GPIO as GPIO
 import time
@@ -147,8 +150,12 @@ except KeyboardInterrupt:
 </details>
 
 Unlike C++, Python bases its arduino code off of hertz. That means that instead of 180* is -0.5 to 0.5.
+</details>
+
 ## Camera_Recording_Code
 [https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/](https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/)
+<details>
+  <summary>Recording Code</summary>
 ```py
 # Python program to illustrate 
 # saving an operated video
@@ -197,8 +204,13 @@ out.release()
 # De-allocate any associated memory usage 
 cv2.destroyAllWindows()
 ```
+</details>
+
 ## PID_Code
 https://pypi.org/project/simple-pid/
+<details>
+  <summary>PID Code</summary>
+	
 ```py
 from simple_pid import PID
 pid = PID(1, 0.1, 0.05, setpoint=1)#IMPORTANT
@@ -330,7 +342,12 @@ cap.release()
 
 cv2.destroyAllWindows()
 ```
+</details>
+	
 ## CODE_PROTOTYPE
+<details>
+  <summary>Prototype Code</summary>
+	
 ```py
 import numpy as np
 from picamera import PiCamera
@@ -491,11 +508,16 @@ cap.release()
 
 cv2.destroyAllWindows()
 ```
+</details>
+	
 ## Prototype_Video
 ![Video1](https://user-images.githubusercontent.com/91289762/234966713-8d4e86ee-c05f-425c-882f-11245f7f868c.gif)
 ![Video2](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/bc533349-fce9-4ae9-b79c-b90d916db971)
 
 # FINAL_CODE
+<details>
+  <summary>Final Code</summary>
+	
 ```py
 import numpy as np
 import cv2
@@ -662,6 +684,8 @@ cap.release()
 out.release()
 cv2.destroyAllWindows()
 ```
+</details>
+	
 # FINAL_VIDEO
 ![ezgif com-gif-maker](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/ae9d6a03-25a1-4e1a-895a-247433709c73)
 
