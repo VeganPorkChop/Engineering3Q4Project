@@ -1,6 +1,7 @@
 # TOC
 <details>
   <summary>Click me</summary>
+	
 	* [PLANNING](#PLANNING)
 	* [Checklist](#Checklist)
 	* [Weekly Updates](#Weekly_Updates)
@@ -23,6 +24,7 @@
 	* [Look out for](#Look_out_for...)
 	* [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD)
 	* [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE)
+	
 </details>
 # PLANNING
 ## Checklist
