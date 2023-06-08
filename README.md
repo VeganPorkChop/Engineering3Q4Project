@@ -699,7 +699,7 @@ cv2.destroyAllWindows()
 ## Design
 Though there are many cool designs to control the balancing plate online, like
 
-<img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/b8c0fdc3-cc57-451e-9aa2-f6d77423c023" alt="The Base" height="300"> or <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/032f6ddb-b862-414b-bf0c-d7f8ed9b6d96" alt="The Base" height="300"> 
+<img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/113209502/b8c0fdc3-cc57-451e-9aa2-f6d77423c023" alt="The Base" height="300"> 
 
 which use more complex systems to create more precise or versatile movements, I went for the most basic of designs, which is one servo controls X, and the other controls Y. I orginally thought that we would need two servos per axis to balance out the weight of the servos, but the in the final design we decided to go with only one servo on each side.  
 
