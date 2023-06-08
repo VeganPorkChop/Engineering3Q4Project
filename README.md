@@ -3,22 +3,20 @@
 ## Goal 
  **Success Statement:** Create a working 2Dof ball balancer, like as seen in [This Video](https://www.youtube.com/watch?v=uRQepbnxg7w), utlizing PID control to optimize balancing.
 
-Criteria: 
+**Criteria:**
 * Use PID
 * Balance the ball
 
-Constraints:
+**Constraints:**
 * We need to a camera and camera recognition to track the ball, as alternatives were too expensive
 * We didn't want to use kinematics to control the plate
 * We didn't have a camera that connected to an arduino, so we needed to learn how to a raspberry pi
 
-Potential Problems:
+**Potential Problems:**
 * Raspberry pi zero won't be fast enough to run our code
 * Image recognition will be hard
 * We have too little time to complete a project of this difficulty
 * One servo will not be enough to turn it fast enough
-
-Planning Gantt Chart:
 
 <details>
   <summary>Material List</summary>
