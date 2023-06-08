@@ -688,6 +688,7 @@ cv2.destroyAllWindows()
 	
 # FINAL_VIDEO
 ![ezgif com-gif-maker](https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/ae9d6a03-25a1-4e1a-895a-247433709c73)
+* This is taken from the camera thats also doing the image processing
 
 # Wiring
 <img src="https://github.com/VeganPorkChop/Engineering3Q4Project/assets/91289762/23425344-9f4e-4db3-9d18-312931dc9fb8" alt="The Base" height="600">
