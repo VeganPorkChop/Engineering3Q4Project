@@ -44,7 +44,9 @@
 # CODE
 ## Camera_Code_+_Detection
 http://trevorappleton.blogspot.com/2013/11/python-getting-started-with-opencv.html
-
+<details>
+  <summary>Click me</summary>
+	
 ```py
 import os
 import cv2
@@ -142,6 +144,8 @@ try:
 except KeyboardInterrupt:
     GPIO.cleanup()
 ```
+</details>
+
 Unlike C++, Python bases its arduino code off of hertz. That means that instead of 180* is -0.5 to 0.5.
 ## Camera_Recording_Code
 [https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/](https://www.geeksforgeeks.org/saving-operated-video-from-a-webcam-using-opencv/)
