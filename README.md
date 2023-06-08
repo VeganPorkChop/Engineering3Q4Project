@@ -1,26 +1,3 @@
-# TOC
-* [PLANNING](#PLANNING)
-* [Goal](#Goal)
-* [Weekly Updates](#Weekly_Updates)
-* [CODE](#CODE)
-* [Camera Code + Detection](#Camera_Code_+_Detection)
-* [Servo Code](#Servo_Code)
-* [Camera Recording Code](#Camera_Recording_Code)
-* [PID Code](#PID_Code)
-* [Camera Recognition Tuning](#Camera_Recognition_Tuning)
-* [CODE PROTOTYPE](#CODE_PROTOTYPE)
-* [Prototype Video](#Prototype_Video)
-* [Final Code](#FINAL_CODE)
-* [Final Video](#FINAL_VIDEO)
-* [Wiring](#Wiring)
-* [CAD](#CAD)
-* [Design](#Design)
-* [Reflection](#Reflection)
-* [Build Reflection](#Build_Reflection)
-* [Code Reflection](#Code_Reflection) 
-* [Look out for](#Look_out_for...)
-* [Milestone Reflection Questions CAD](#Milestone_Reflection_Questions_CAD)
-* [Milestone Reflection Questions CODE](#Milestone_Reflection_Questions_CODE)
 # PLANNING
 
 ## Goal 
