@@ -12,11 +12,13 @@ Constraints:
 * We didn't want to use kinematics to control the plate
 * We didn't have a camera that connected to an arduino, so we needed to learn how to a raspberry pi
 
-Potential problem:
+Potential Problems:
 * Raspberry pi zero won't be fast enough to run our code
 * Image recognition will be hard
 * We have too little time to complete a project of this difficulty
 * One servo will not be enough to turn it fast enough
+
+Planning Gantt Chart:
 
 <details>
   <summary>Material List</summary>
